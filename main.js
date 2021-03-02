@@ -1,4 +1,4 @@
-menu_list_array - ["Chicken Tandoori Pizza",
+menu_list_array = ["Chicken Tandoori Pizza",
     "Veg Supreme Pizza",
     "Paneer Tikka Pizza",
     "Deluxe Veggie Pizza",
@@ -17,15 +17,10 @@ function getmenu() {
     document.getElementById("display_menu").innerHTML = htmldata;
 }
 
-function addItem() {
+function add_item() {
     var htmldata;
-    var item = document.getElementById("addItem").value;
+    var item = document.getElementById("add_item").value;
     menu_list_array.push(item);
     menu_list_array.sort();
-    htmldata = "<section class = 'cards'>"
-    for (var i = 0; i < menu_list_array.length; i++) {
-        htmldata = htmldata + "<div class = 'card'>" + "<img src = 'pizzaImg'/>" + menu_list_array[i] + '</div>'
-    }
-    htmldata = htmldata + "</section>"
-    document.getElementById("display_addedmenu").innerHTML = htmldata;
+    console.log(menu_list_array);
 }
